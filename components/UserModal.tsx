@@ -104,7 +104,7 @@ export function UserModal({ user, isLoading, onClose }: UserModalProps) {
             >
               <div className="flex items-center gap-4 pr-8">
                 <div
-                  className="w-14 h-14 rounded-full flex-shrink-0 flex items-center justify-center text-white font-bold text-lg"
+                  className="w-14 h-14 rounded-full shrink-0 flex items-center justify-center text-white font-bold text-lg"
                   style={{ backgroundColor: getAvatarColor(user.name) }}
                 >
                   {getInitials(user.name)}
@@ -144,7 +144,7 @@ export function UserModal({ user, isLoading, onClose }: UserModalProps) {
                   Address
                 </h3>
                 <div className="flex items-start gap-2.5">
-                  <MapPin size={14} className="mt-0.5 flex-shrink-0" style={{ color: "var(--primary)" }} />
+                  <MapPin size={14} className="mt-0.5 shrink-0" style={{ color: "var(--primary)" }} />
                   <div className="text-sm" style={{ color: "var(--ink)" }}>
                     <p>{user.address.street}, {user.address.suite}</p>
                     <p>{user.address.city}, {user.address.zipcode}</p>
@@ -165,7 +165,7 @@ export function UserModal({ user, isLoading, onClose }: UserModalProps) {
                     <Building2 size={14} style={{ color: "var(--primary)" }} />
                     <span className="font-semibold text-sm" style={{ color: "var(--ink)" }}>{user.company.name}</span>
                   </div>
-                  <p className="text-sm italic mb-1" style={{ color: "var(--ink)" }}>"{user.company.catchPhrase}"</p>
+                  <p className="text-sm italic mb-1" style={{ color: "var(--ink)" }}>&quot;{user.company.catchPhrase}&quot;</p>
                   <div className="flex items-center gap-1.5 mt-2">
                     <Briefcase size={11} style={{ color: "var(--ink-muted)" }} />
                     <span className="text-xs" style={{ color: "var(--ink-muted)" }}>{user.company.bs}</span>

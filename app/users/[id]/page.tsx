@@ -70,16 +70,11 @@ export default async function UserDetailPage({
           boxShadow: "var(--shadow-elevated)",
         }}
       >
-        {/* Hero strip */}
-        <div
-          className="h-24 relative"
-          style={{ background: `linear-gradient(135deg, ${avatarColor}cc, ${avatarColor}88)` }}
-        />
-
+         
         {/* Avatar + name */}
-        <div className="px-6 pb-6">
+        <div className="px-6 pt-6 pb-6">
           <div
-            className="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-2xl border-4 -mt-10 mb-4"
+            className="w-20 h-20 rounded-full flex items-center justify-center text-white font-bold text-2xl border-4 mb-4"
             style={{
               backgroundColor: avatarColor,
               borderColor: "var(--canvas)",
@@ -97,6 +92,7 @@ export default async function UserDetailPage({
           </p>
         </div>
 
+      
         {/* Sections */}
         <div className="px-6 pb-6 space-y-6" style={{ borderTop: "1px solid var(--border)" }}>
           {/* Contact */}
@@ -107,7 +103,7 @@ export default async function UserDetailPage({
             <div className="space-y-3">
               <InfoRow icon={<Mail size={15} />} label="Email" href={`mailto:${user.email}`} value={user.email} />
               <InfoRow icon={<Phone size={15} />} label="Phone" href={`tel:${user.phone}`} value={user.phone} />
-              <InfoRow icon={<Globe size={15} />} label="Website" href={`https://${user.website}`} value={user.website} external />
+              <InfoRow icon={<Globe size={15} />} label="Website" href={`${user.website}`} value={user.website} external />
             </div>
           </section>
 
